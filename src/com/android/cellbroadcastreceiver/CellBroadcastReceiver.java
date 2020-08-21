@@ -40,7 +40,6 @@ import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.telephony.cdma.CdmaSmsCbProgramData;
-import android.text.TextUtils;
 import android.util.EventLog;
 import android.util.Log;
 import android.widget.Toast;
