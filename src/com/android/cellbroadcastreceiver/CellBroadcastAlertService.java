@@ -705,7 +705,7 @@ public class CellBroadcastAlertService extends Service
         // Emergency messages use a different audio playback and display path. Since we use
         // addToNotification for the emergency display on FEATURE WATCH devices vs the
         // Alert Dialog, it will call this and override the emergency audio tone.
-        if (isWatch && !CellBroadcastChannelManager.isEmergencyMessage(context, message)) {
+        if (isWatch && !channelManager.isEmergencyMessage(message)) {
             if (res.getBoolean(R.bool.watch_enable_non_emergency_audio)) {
                 // start audio/vibration/speech service for non emergency alerts
                 Intent audioIntent = new Intent(context, CellBroadcastAlertAudio.class);
